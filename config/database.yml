@@ -22,4 +22,5 @@ test:
 
 production:
   <<: *default
-  database: xapi
+  database: xapi_development
+  user: www-data
