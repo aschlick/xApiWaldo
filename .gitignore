@@ -33,3 +33,9 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+app/assets/javascripts/jspm_packages/
+app/assets/javascripts/node_modules/
+public/assets
+app/assets/javascripts/xApi/app-build.js
+app/assets/javascripts/vendor-build.js
