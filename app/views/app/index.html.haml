@@ -1,10 +1,6 @@
 %section{'aurelia-app': ''}
-  -if Rails.env.production?
-    =javascript_include_tag "vendor-build"
-    =javascript_include_tag "app-build"
-  -else
-    =javascript_include_tag "jspm_packages/system"
-    =javascript_include_tag "config"
+  =javascript_include_tag "jspm_packages/system"
+  =javascript_include_tag "config"
 
   :javascript
     System.import('aurelia-bootstrapper');

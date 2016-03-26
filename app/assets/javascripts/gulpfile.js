@@ -34,6 +34,7 @@ var config = {
         "aurelia-history-browser",
         "aurelia-logging-console",
         "bootstrap",
+        "babel-runtime"
         "bootstrap/css/bootstrap.css!text"
       ],
       options: {
@@ -48,11 +49,15 @@ gulp.task('haml', function(){
   gulp.src('./xApi/*.haml')
     .pipe(haml({ext: ''}))
     .pipe(gulp.dest('./xApi/'));
-})
+});
+
+gulp.task('move', function(){
+  fs.createReadStream('./jspm_packages/system.js').pipe(fs.createWriteStream('../../../public/javascripts/jspm_packages/system.js'));
+  fs.createReadStream('./config.js').pipe(fs.createWriteStream('../../../public/javascripts/config.js'));
+  fs.renameSync('./xApi/app-build.js', '../../../public/assets/xApi/app-build.js');
+  fs.renameSync('./vendor-build.js', '../../../public/assets/xApi/vendor-build.js');
+});
 
 gulp.task('bundle', function() {
-  if(bundle(config)){
-    fs.renameSync('./xApi/app-build.js', '../../../public/assets/app-build.js');
-    fs.renameSync('./vendor-build.js', '../../../public/assets/vendor-build.js');
-  };
+  bundle(config)){
 });
