@@ -59,7 +59,7 @@ gulp.task('move', function(){
 });
 
 gulp.task('bundle', function() {
-  bundle(config)){
+  bundle(config);
 });
 
 gulp.task('default', ['haml', 'bundle', 'move']);
