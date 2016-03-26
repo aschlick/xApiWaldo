@@ -34,7 +34,7 @@ var config = {
         "aurelia-history-browser",
         "aurelia-logging-console",
         "bootstrap",
-        "babel-runtime"
+        "babel-runtime",
         "bootstrap/css/bootstrap.css!text"
       ],
       options: {
