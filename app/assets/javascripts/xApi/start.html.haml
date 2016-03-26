@@ -1,30 +1,31 @@
 %template
-  #start
-    .text-center#title
-      %h1 Where's Waldo?
-    .well
-      .row
-        .col-md-10.col-md-offset-1.text-center
-          %h2 Welcome
+  .container
+    #start
+      .text-center#title
+        %h1 Where's Waldo?
+      .well
+        .row
+          .col-md-10.col-md-offset-1.text-center
+            %h2 Welcome
 
-      .row
-        .col-md-5.col-md-offset-1
-          %h5 How to Play
-        .col-md-5
-          %h5.text-center Waldo
-      .row
-        .col-md-5.col-md-offset-1.next-to-picture
-          Take a look at the picture and find Waldo. To win, click on Waldo!
-        .col-md-5
-          .row
-            .col-md-6.col-md-offset-3
-              %img{src: 'assets/waldo.png', alt: 'Waldo'}
+        .row
+          .col-md-5.col-md-offset-1
+            %h5 How to Play
+          .col-md-5
+            %h5.text-center Waldo
+        .row
+          .col-md-5.col-md-offset-1.next-to-picture
+            Take a look at the picture and find Waldo. To win, click on Waldo!
+          .col-md-5
+            .row
+              .col-md-6.col-md-offset-3
+                %img{src: 'assets/waldo.png', alt: 'Waldo'}
 
-      .row
-        .col-md-10.col-md-offset-1.text-center
-          %p We use cookies to keep track of your visits. By clicking start you agree to the use of cookies.
+        .row
+          .col-md-10.col-md-offset-1.text-center
+            %p We use cookies to keep track of your visits. By clicking start you agree to the use of cookies.
 
-      .row
-        .col-md-10.col-md-offset-1.text-center
-          %p
-            %a.btn.btn-lg.btn-primary{'route-href': 'route: pictures'} Start
+        .row
+          .col-md-10.col-md-offset-1.text-center
+            %p
+              %a.btn.btn-lg.btn-primary{'route-href': 'route: pictures'} Start
