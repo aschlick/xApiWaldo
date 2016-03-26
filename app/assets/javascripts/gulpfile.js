@@ -52,8 +52,8 @@ gulp.task('haml', function(){
 });
 
 gulp.task('move', function(){
-  fs.createReadStream('./jspm_packages/system.js').pipe(fs.createWriteStream('../../../public/javascripts/jspm_packages/system.js'));
-  fs.createReadStream('./config.js').pipe(fs.createWriteStream('../../../public/javascripts/config.js'));
+  fs.writeFileSync('../../../public/javascripts/jspm_packages/system.js', fs.readFileSync('./jspm_packages/system.js'));
+  fs.writeFileSync('../../../public/javascripts/config.js', fs.readFileSync('./config.js'));
   fs.renameSync('./xApi/app-build.js', '../../../public/assets/xApi/app-build.js');
   fs.renameSync('./vendor-build.js', '../../../public/assets/xApi/vendor-build.js');
 });
