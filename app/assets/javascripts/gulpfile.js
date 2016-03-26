@@ -50,7 +50,7 @@ var config = {
 
 gulp.task('haml', function(){
   gulp.src('./xApi/*.haml')
-    .pipe(haml({ext: ''}))
+    .pipe(haml({ext: '', compiler: 'visionmedia'}))
     .pipe(gulp.dest('./xApi/'));
 });
 
