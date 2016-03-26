@@ -5,7 +5,7 @@ capybara-*.html
 /tmp
 /db/*.sqlite3
 /db/*.sqlite3-journal
-/public/system
+/public/
 /coverage/
 /spec/tmp
 **.orig
@@ -39,3 +39,4 @@ app/assets/javascripts/node_modules/
 public/assets
 app/assets/javascripts/xApi/app-build.js
 app/assets/javascripts/vendor-build.js
+node_modules

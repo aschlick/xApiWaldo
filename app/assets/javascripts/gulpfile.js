@@ -12,7 +12,7 @@ var config = {
       includes: [
         '[*.js]',
         '*.html!text',
-        '*.css!text',
+        '*.css!text'
       ],
       options: {
         inject: true,
@@ -34,8 +34,11 @@ var config = {
         "aurelia-history-browser",
         "aurelia-logging-console",
         "bootstrap",
-        "babel-runtime",
-        "bootstrap/css/bootstrap.css!text"
+        "babel-runtime/helpers/create-class",
+        "babel-runtime/helpers/class-call-check",
+        "bootstrap/css/bootstrap.css!text",
+        "font-awesome/css/font-awesome.css!text",
+        "fetch"
       ],
       options: {
         inject: true,
@@ -51,7 +54,7 @@ gulp.task('haml', function(){
     .pipe(gulp.dest('./xApi/'));
 });
 
-gulp.task('move', function(){
+gulp.task('move',['bundle'], function(){
   fs.writeFileSync('../../../public/javascripts/jspm_packages/system.js', fs.readFileSync('./jspm_packages/system.js'));
   fs.writeFileSync('../../../public/javascripts/config.js', fs.readFileSync('./config.js'));
   fs.renameSync('./xApi/app-build.js', '../../../public/assets/xApi/app-build.js');
@@ -59,7 +62,7 @@ gulp.task('move', function(){
 });
 
 gulp.task('bundle', function() {
-  bundle(config);
+  return bundle(config);
 });
 
 gulp.task('default', ['haml', 'bundle', 'move']);
