@@ -6,10 +6,10 @@ import 'fetch';
 
 export class Start{
   constructor(){
-    console.log('Start constructed');
+
   }
 
   activate(){
-    console.log('Start activated');
+
   }
 }

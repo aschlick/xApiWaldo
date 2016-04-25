@@ -1,2 +1,45 @@
 %template
-  %img{'src.bind': 'picture.path'}
+  .row
+    .col-md-10.col-md-offset-1
+      .pull-right
+        %button.btn.btn-danger{'click.delegate': 'quit()'} Quit
+
+      %button.btn.btn-primary{'click.delegate': 'hint()'} Hint
+
+  .row
+    .col-md-10.col-md-offset-1
+      %img{'src.bind': 'picture.path', 'click.delegate': 'clicked($event)', 'style': 'width: 100%;'}
+
+  #quitDialog.modal{role: "dialog"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %h4.modal-title Game Over
+        .modal-body
+          Thanks for Playing!
+        .modal-footer
+          .small
+            You will have to close the window to exit.
+  #hintDialog.modal{role: 'dialog'}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{ 'data-dismiss':"modal" } &times;
+          %h4.modal-title Your hint
+        .modal-body.text-center
+          %template{ 'if.bind': 'hintType === 0'}
+            %img{'src.bind': 'picture.hintPath'}
+            -# picture hint
+          %template{ 'if.bind': 'hintType === 1'}
+            -# word hint
+            Waldo is hiding between yellow and red.
+        .modal-footer
+          %button.btn.btn-primary{'click.delegate': 'closeHint()'} Close
+  #winDialog.modal{ role: 'dialog' }
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %h4.modal-title Congratulations!
+        .modal-body
+          %p You found waldo! thanks for taking the time to participate.
+          %p{ 'text.bind': 'time_taken_string()'}

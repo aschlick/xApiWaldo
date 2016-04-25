@@ -12,5 +12,5 @@ Rails.application.config.assets.version = '1.0'
 if Rails.env.production?
   Rails.application.config.assets.precompile = %w( application.css )
 else
-  Rails.application.config.assets.precompile += %w( jspm_packages/system.js config.js )
+  Rails.application.config.assets.precompile += %w( jspm_packages/system.js config.js xapiwrapper.min.js js.cookie.min.js )
 end
