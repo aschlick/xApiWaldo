@@ -10,7 +10,7 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 if Rails.env.production?
-  Rails.application.config.assets.precompile = %w( application.css )
+  Rails.application.config.assets.precompile = %w( application.css waldo.png maps_troy.jpg picture_hint.png)
 else
   Rails.application.config.assets.precompile += %w( jspm_packages/system.js config.js xapiwrapper.min.js js.cookie.min.js )
 end
