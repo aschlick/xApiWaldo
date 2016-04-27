@@ -2,9 +2,8 @@
   .row
     .col-md-10.col-md-offset-1
       .pull-right
+        %button.btn.btn-primary{'click.delegate': 'hint()'} Hint
         %button.btn.btn-danger{'click.delegate': 'quit()'} Quit
-
-      %button.btn.btn-primary{'click.delegate': 'hint()'} Hint
 
   .row
     .col-md-10.col-md-offset-1
@@ -16,7 +15,7 @@
         .modal-header
           %h4.modal-title Game Over
         .modal-body
-          Thanks for Playing!
+          Thanks for playing!
         .modal-footer
           .small
             You will have to close the window to exit.
@@ -41,5 +40,5 @@
         .modal-header
           %h4.modal-title Congratulations!
         .modal-body
-          %p You found waldo! thanks for taking the time to participate.
+          %p You found Waldo! Thanks for taking the time to participate.
           %p{ 'text.bind': 'time_taken_string()'}
