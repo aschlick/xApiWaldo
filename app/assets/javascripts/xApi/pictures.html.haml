@@ -31,7 +31,7 @@
             -# picture hint
           %template{ 'if.bind': 'hintType === 1'}
             -# word hint
-            Waldo is hiding between yellow and red.
+            Follow the arrows to find Waldo.
         .modal-footer
           %button.btn.btn-primary{'click.delegate': 'closeHint()'} Close
   #winDialog.modal{ role: 'dialog' }
@@ -42,3 +42,5 @@
         .modal-body
           %p You found Waldo! Thanks for taking the time to participate.
           %p{ 'text.bind': 'time_taken_string()'}
+        .modal-footer
+          You may now close the window, or refresh to play again.
