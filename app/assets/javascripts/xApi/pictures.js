@@ -48,8 +48,8 @@ export class Pictures{
     var xpercent = $event.layerX / $event.srcElement.width;
     var ypercent = $event.layerY / $event.srcElement.height;
 
-    var successX = xpercent > 0.1734767 && xpercent < 0.1842294;
-    var successY = ypercent > 0.8393040 && ypercent < 0.8587513;
+    var successX = xpercent > 0.225806 && xpercent < 0.243011;
+    var successY = ypercent > 0.755447 && ypercent < 0.784504;
 
     console.log({x: xpercent, y: ypercent})
 
