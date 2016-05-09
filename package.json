@@ -1,0 +1,15 @@
+{
+  "name": "get_xapi_data",
+  "version": "1.0.0",
+  "description": "gets data from the lrs",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Schlicker",
+  "license": "ISC"
+}
